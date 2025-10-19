@@ -1130,7 +1130,7 @@ Finished
 
 ### Shell as NT AUTHORITY\SYSTEM on WEB-01$
 
-#### ESC8 Exploitation (NTLM Relay to AD CS Web Enrollment)
+#### ESC8 Exploitation
 
 Ya que hemos verificado que probablemente el Domain Controller disponga del rol de `Active Directory Certificate Services (ADCS)`, decidimos verificar si existe algún template vulnerable donde realizar un ESC.
 
