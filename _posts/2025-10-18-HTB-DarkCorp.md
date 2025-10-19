@@ -6,8 +6,6 @@ tags: [Roundcube, CVE-2024-42009, SQLi, PostgreSQL, pg_read_file, pg_ls_dir, Pos
 image: /assets/img/writeups/htb-darkcorp/DarkCorpLogo.png
 ---
 
-
----
 ## Reconnaissance
 
 Para la fase de reconocimiento inicial de la máquina **`DarkCorp`** utilizamos nuestra herramienta personalizada [**iRecon**](https://github.com/Gzzcoo/iRecon). Esta herramienta automatiza un escaneo Nmap completo que incluye:
