@@ -2111,7 +2111,7 @@ SMB         172.16.20.1     445    DC-01            [-] darkcorp.htb\angela.w.ad
 > Dado que MIT Kerberos **no verifica el PAC**, controlar una cuenta de dominio y alterar su UPN nos permite suplantar a otro usuario.
 {: .prompt-info }
 
-Para más información, podemos consultar la siguiente página web donde se explica y se detalla la metodología del ataque: [SSH-GSSAPI](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-linux/#ssh-gssapi).
+Para más información, podemos consultar la siguiente página web donde se explica y se detalla la metodología del ataque: [SSH-GSSAPI](https://swisskyrepo.github.io/InternalAllTheThings/active-directory/ad-adds-linux/#ssh-gssapi) y [A Broken Marriage Abusing Mixed Vendor Kerberos Stacks](https://www.pentestpartners.com/security-blog/a-broken-marriage-abusing-mixed-vendor-kerberos-stacks/).
 
 Comprobamos si el servidor SSH de `drip.darkcorp.htb` tiene `GSSAPIAuthentication` habilitado. El resultado muestra que GSSAPI authentication está habilitado, por lo que el servidor es candidato válido para el ataque.
 
