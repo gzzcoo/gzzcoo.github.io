@@ -1,6 +1,6 @@
 ---
 title: "HTB DarkCorp"
-date: 2025-10-17 02:45:00 +0000
+date: 2025-10-18 02:45:00 +0000
 categories: [WriteUps, Hack The Box, Active Directory, Insane]
 tags: [Roundcube, CVE-2024-42009, SQLi, PostgreSQL, pg_read_file, pg_ls_dir, PostgreSQLRevShell, GPGDecrypt, DiscoverHosts, FScan, PortForwarding, Ligolo-ng, AS-REPRoast, NTLMRelay, RelayAttacks, Ntlmrelayx, ADCS, ESC8, Krbrelayx, PetitPotam, S4U2Self, PassTheTicket, BloodHound, ACLs, winPEAS, SAMDump, DPAPI, PasswordSpraying, GenericWrite, UPNSpoofing, SSH_GSSAPI, SSHWithKerberos, linPEAS, SSSDcreds, pyGPOAbuse, NTDS, DCSync]
 image: /assets/img/writeups/htb-darkcorp/DarkCorpLogo.png
