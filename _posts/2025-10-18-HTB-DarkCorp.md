@@ -1510,7 +1510,7 @@ LDAP        172.16.20.1     389    DC-01            [+] darkcorp.htb\WEB-01$:8f3
 ----
 ### S4U2Self and Pass-the-Ticket (PtT) with smbexec to get NT Authority\SYSTEM on WEB-01
 
-Debido que disponemos de las credenciales del equipo `WEB-01$` tenemos de buscar alguna manera de poder autenticarnos en él. Si fuésemos un Domain Controller, podríamos realizar un `DCSync Attack` contra nosotros mismos para obtener los hashes NTLM, pero no es el caso, ya que somos un `Domain Computer` sin más.
+Debido que disponemos de las credenciales del equipo `WEB-01$` tenemos de buscar alguna manera de poder autenticarnos en él.
 
 > Esto se debe a que las cuentas de equipo **no obtienen** acceso de administrador local a sí mismas de forma remota.  La solución para comprometer cualquier equipo una vez que tienes su TGT o credenciales, es usar el protocolo **S4U2self** para obtener un **service ticket** usable para otro usuario (suplantado).
 {: .prompt-info }
