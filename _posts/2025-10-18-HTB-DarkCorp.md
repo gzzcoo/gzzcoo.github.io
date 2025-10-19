@@ -5,7 +5,7 @@ categories: [WriteUps, Hack The Box, Active Directory, Insane]
 tags: [Roundcube, CVE-2024-42009, SQLi, PostgreSQL, pg_read_file, pg_ls_dir, PostgreSQLRevShell, GPGDecrypt, DiscoverHosts, FScan, PortForwarding, Ligolo-ng, AS-REPRoast, NTLMRelay, RelayAttacks, Ntlmrelayx, ADCS, ESC8, Krbrelayx, PetitPotam, S4U2Self, PassTheTicket, BloodHound, ACLs, winPEAS, SAMDump, DPAPI, PasswordSpraying, GenericWrite, UPNSpoofing, SSH_GSSAPI, SSHWithKerberos, linPEAS, SSSDcreds, pyGPOAbuse, NTDS, DCSync]
 image: /assets/img/writeups/htb-darkcorp/DarkCorpLogo.png
 ---
-- Tags: [#Roundcube](/tags/roundcube/) [#CVE-2024-42009](/tags/cve-2024-42009/) [#SQLi](/tags/sqli/) [#PostgreSQL](/tags/postgresql/) [#pg_read_file](/tags/pg_read_file/) [#pg_ls_dir](/tags/pg_ls_dir/) [#PostgreSQLRevShell](/tags/postgresqlrevshell/) [#GPGDecrypt](/tags/gpgdecrypt/) [#DiscoverHosts](/tags/discoverhosts/) [#FScan](/tags/fscan/) [#PortForwarding](/tags/portforwarding/) [#Ligolo-ng](/tags/ligolo-ng/) [#AS-REPRoast](/tags/as-reproast/) [#NTLMRelay](/tags/ntlmrelay/) [#RelayAttacks](/tags/relayattacks/) [#Ntlmrelayx](/tags/ntlmrelayx/) [#ADCS](/tags/adcs/) [#ESC8](/tags/esc8/) [#Krbrelayx](/tags/krbrelayx/) [#PetitPotam](/tags/petitpotam/) [#S4U2Self](/tags/s4u2self/) [#PassTheTicket](/tags/passtheticket/) [#BloodHound](/tags/bloodhound/) [#ACLs](/tags/acls/) [#winPEAS](/tags/winpeas/) [#SAMDump](/tags/samdump/) [#DPAPI](/tags/dpapi/) [#PasswordSpraying](/tags/passwordspraying/) [#GenericWrite](/tags/genericwrite/) [#UPNSpoofing](/tags/upnspoofing/) [SSH_GSSAPI](/tags/ssh_gssapi/) [#SSHWithKerberos](/tags/sshwithkerberos/) [#linPEAS](/tags/linpeas/) [#SSSDcreds](/tags/sssdcreds/) [#pyGPOAbuse](/tags/pygpoabuse/) [#NTDS](/tags/ntds/) [#DCSync](/tags/dcsync/)
+
 
 ---
 ## Reconnaissance
