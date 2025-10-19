@@ -1504,7 +1504,7 @@ LDAP        172.16.20.1     389    DC-01            [+] darkcorp.htb\WEB-01$:8f3
 ```
 
 ----
-### S4U2Self and Pass-the-Ticket (PtT) with smbexec to get NT Authority\SYSTEM on WEB-01
+### S4U2Self to get NT Authority\SYSTEM on WEB-01
 
 Debido que disponemos de las credenciales del equipo `WEB-01$` tenemos de buscar alguna manera de poder autenticarnos en él.
 
@@ -2216,7 +2216,7 @@ Por otro lado, ya que utilizaremos la autenticación `GSSAPI` en SSH, deberemos 
 ```
 
 ---
-### Abusing SSH Pass-the-Cert (PtC) through UPN Spoofing Attack
+### Abusing SSH through UPN Spoofing Attack
 
 Ya que tenemos el TGT en nuestra variable `KRB5CCNAME`, nos autenticaremos al servidor SSH de `drip.darkcorp.htb`. Verificamos que hemos logrado acceder al servidor `drip` como el usuario `angela.w.adm` y disponemos de permisos de `sudo` en `(ALL : ALL) NOPASSWD: ALL`.
 
