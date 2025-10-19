@@ -5,7 +5,22 @@ categories: [WriteUps, Hack The Box, Active Directory, Insane]
 tags: [Roundcube, CVE-2024-42009, SQLi, PostgreSQL, pg_read_file, pg_ls_dir, PostgreSQLRevShell, GPGDecrypt, DiscoverHosts, FScan, PortForwarding, Ligolo-ng, AS-REPRoast, NTLMRelay, RelayAttacks, Ntlmrelayx, ADCS, ESC8, Krbrelayx, PetitPotam, S4U2Self, PassTheTicket, BloodHound, ACLs, winPEAS, SAMDump, DPAPI, PasswordSpraying, GenericWrite, UPNSpoofing, SSH_GSSAPI, SSHWithKerberos, linPEAS, SSSDcreds, pyGPOAbuse, NTDS, DCSync]
 image: /assets/img/writeups/htb-darkcorp/DarkCorpLogo.png
 ---
+`DarkCorp` es una máquina de HackTheBox que destaca por su complejidad técnica y escenario realista de infraestructura corporativa. El entorno consta de tres sistemas interconectados: un servidor Debian con servicios web y de correo, un equipo Windows unido a dominio y un controlador de dominio Active Directory.
 
+La intrusión comienza identificando una vulnerabilidad de cross-site scripting (XSS) en la instancia de RoundCube que permite el robo de sesiones administrativas. Esto revela credenciales temporales y subdominios internos no documentados. El acceso al panel administrativo expone una inyección SQL en PostgreSQL que se aprovecha para lograr ejecución remota de comandos mediante funciones de base de datos.
+
+La escalada de privilegios en el servidor Linux conduce al descubrimiento de respaldos cifrados con PGP que contienen hashes de cuentas de dominio. Tras su descifrado, se obtiene acceso inicial al entorno Active Directory. Estas credenciales permiten interactuar con un servicio de monitorización web en el servidor Windows que realiza verificaciones HTTP con autenticación NTLM.
+
+Mediante técnicas de relay de autenticación NTLM y explotación de vulnerabilidades en el servicio de impresión, se consigue acceso privilegiado al servidor WEB-01. El análisis del sistema revela credenciales almacenadas en tareas programadas y el Gestor de Credenciales de Windows.
+
+El descubrimiento de reutilización de contraseñas entre cuentas permite expandir el acceso dentro del dominio. Se identifican configuraciones de delegación constrained y se manipulan atributos de shadow credentials para obtener acceso administrativo adicional.
+
+El acceso root al servidor Debian permite extraer credenciales cacheadas del servicio SSSD, facilitando el movimiento lateral al controlador de dominio. La modificación final de Group Policy Objects (GPO) establece control administrativo completo sobre toda la infraestructura del dominio.
+
+La máquina demuestra técnicas avanzadas de post-explotación en entornos Active Directory incluyendo; Relay Attacks, ADCS, Credential Caching, Shadow Credentials y Group Policy exploitation.
+
+- Tags: [#Roundcube](/tags/roundcube/) [#CVE-2024-42009](/tags/cve-2024-42009/) [#SQLi](/tags/sqli/) [#PostgreSQL](/tags/postgresql/) [#pg_read_file](/tags/pg_read_file/) [#pg_ls_dir](/tags/pg_ls_dir/) [#PostgreSQLRevShell](/tags/postgresqlrevshell/) [#GPGDecrypt](/tags/gpgdecrypt/) [#DiscoverHosts](/tags/discoverhosts/) [#FScan](/tags/fscan/) [#PortForwarding](/tags/portforwarding/) [#Ligolo-ng](/tags/ligolo-ng/) [#AS-REPRoast](/tags/as-reproast/) [#NTLMRelay](/tags/ntlmrelay/) [#RelayAttacks](/tags/relayattacks/) [#Ntlmrelayx](/tags/ntlmrelayx/) [#ADCS](/tags/adcs/) [#ESC8](/tags/esc8/) [#Krbrelayx](/tags/krbrelayx/) [#PetitPotam](/tags/petitpotam/) [#S4U2Self](/tags/s4u2self/) [#PassTheTicket](/tags/passtheticket/) [#BloodHound](/tags/bloodhound/) [#ACLs](/tags/acls/) [#winPEAS](/tags/winpeas/) [#SAMDump](/tags/samdump/) [#DPAPI](/tags/dpapi/) [#PasswordSpraying](/tags/passwordspraying/) [#GenericWrite](/tags/genericwrite/) [#UPNSpoofing](/tags/upnspoofing/) [SSH_GSSAPI](/tags/ssh_gssapi/) [#SSHWithKerberos](/tags/sshwithkerberos/) [#linPEAS](/tags/linpeas/) [#SSSDcreds](/tags/sssdcreds/) [#pyGPOAbuse](/tags/pygpoabuse/) [#NTDS](/tags/ntds/) [#DCSync](/tags/dcsync/)
+---
 ## Reconnaissance
 
 Para la fase de reconocimiento inicial de la máquina **`DarkCorp`** utilizamos nuestra herramienta personalizada [**iRecon**](https://github.com/Gzzcoo/iRecon). Esta herramienta automatiza un escaneo Nmap completo que incluye:
