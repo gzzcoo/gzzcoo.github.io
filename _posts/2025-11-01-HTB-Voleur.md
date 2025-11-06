@@ -2,11 +2,12 @@
 title: "HTB Voleur"
 date: 2025-10-31 00:35:00 +0000
 categories: [WriteUps, Hack The Box, Active Directory, Medium]
-tags: [RIDCycling, BloodHound, Kerberoasting, TargetedKerberoast, GenericWrite, RunasCs, ACLs, RestoringADObject, DPAPI, TargetedKerberoast, PasswordSpraying, DPAPI, NTDS]
+tags: [BloodHound, Kerberoasting, TargetedKerberoast, writeSPN, GenericWrite, RunasCs, ACLs, RestoringADObject, DPAPI, TargetedKerberoast, PasswordSpraying, DPAPI, NTDS]
 image: /assets/img/writeups/htb-voleur/HTB-Voleur.png
 ---
+`Voleur` es una máquina de dificultad media diseñada en torno a un escenario de intrusión hipotético, donde al atacante se le facilitan credenciales de usuario con **bajos privilegios**. La máquina incluye un entorno `Active Directory`, y `NTLM` está deshabilitado. Tras configurar `Kerberos` y realizar la enumeración de red, se encuentra un archivo Excel protegido con contraseña en un recurso `SMB` expuesto. Extraemos su hash de contraseña, lo crackeamos para recuperar la contraseña y usamos esa contraseña para acceder a la hoja de cálculo. La enumeración revela una service account con permisos `WriteSPN`, lo que permite un ataque dirigido de `Kerberoasting` que recupera credenciales y concede acceso remoto al host. Un usuario de dominio previamente eliminado es restaurado usando privilegios de grupo, y se recupera un blob de credenciales protegido por `DPAPI`, que se desencripta con la contraseña del usuario para revelar una cuenta de mayor privilegio. Estas credenciales llevan al descubrimiento de una clave privada SSH de una cuenta de servicio de backup, lo que permite acceso a un subsistema Linux por un puerto no estándar. Desde ahí se extraen los archivos de backup `NTDS.dit`, `SYSTEM` y `SECURITY`, que se utilizan para recuperar el hash NT del Administrator, lo que en última instancia permite el acceso como Administrator.
 
-- Tags: [#RIDCycling](/tags/ridcycling/) [#BloodHound](/tags/bloodhound/) [#Kerberoasting](/tags/kerberoasting/) [#TargetedKerberoast](/tags/targetedkerberoast/) [#GenericWrite](/tags/genericwrite/) [#RunasCs](/tags/runascs/) [#ACLs](/tags/acls/) [#RestoringADObject](/tags/restoringadobject/) [#DPAPI](/tags/dpapi/) [#NTDS](/tags/ntds/)
+- Tags: [#BloodHound](/tags/bloodhound/) [#Kerberoasting](/tags/kerberoasting/) [#TargetedKerberoast](/tags/targetedkerberoast/) [#GenericWrite](/tags/genericwrite/) [#RunasCs](/tags/runascs/) [#ACLs](/tags/acls/) [#RestoringADObject](/tags/restoringadobject/) [#DPAPI](/tags/dpapi/) [#NTDS](/tags/ntds/)
 
 ------
 ## Reconnaissance
