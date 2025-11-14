@@ -70,6 +70,8 @@ Aquí viene mi única queja real: que la mitad de la puntuación dependa del OPS
 
 En mi caso, el examen me tomó 23 horas y en algunos momentos sufrí más de lo esperado. Como mencioné antes, no estaba familiarizado con C2 - siempre había trabajado con Exegol y lo que aprendí de Windows en el CRTP. Iba un poco "incómodo" porque sabía qué hacer, pero la dificultad estaba en hacerlo desde Cobalt Strike. Al final logré resolver todo en el primer intento.
 
+![images](/assets/img/certifications/crto/funny-celebrate-56.gif)
+
 La parte del OPSEC me daba más respeto que en el CRTP, porque no quería suspender por eso y siempre tenía ese miedo de ejecutar un comando y esperar a ver si funcionaba o si sería detectado.
 
 El nivel de dificultad me pareció más alto que los labs (al contrario que en el CRTP), aunque en cuanto a ataques y conceptos de Active Directory lo llevaba bien, ya que es lo que mejor se me da. Lo más complicado para mí fue definitivamente el pivoting con C2.
