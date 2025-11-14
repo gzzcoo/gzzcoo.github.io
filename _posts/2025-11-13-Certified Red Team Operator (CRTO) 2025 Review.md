@@ -20,6 +20,8 @@ La certificación nos guía a través del ciclo completo de un ataque ofensivo:
 
 El curso establece una base sólida en el funcionamiento del C2 - **Cobalt Strike**, framework que utilizaremos de manera extensiva tanto en la formación como en la evaluación final. Una vez que se ha disfrutado y asimilado todo el contenido del curso, el siguiente paso es enfrentarse a un **examen práctico de 48 horas** para conseguir la certificación **Certified Red Team Operator (CRTO)**.
 
+![images](/assets/img/certifications/crto/cobaltstrike.png)
+
 ---
 
 ## The Course
