@@ -8,7 +8,7 @@ image: /assets/img/writeups/htb-outbound/HTB-Outbound_logo.png
 
 `Outbound` es una máquina Linux de dificultad fácil que presenta una instancia de Roundcube Webmail vulnerable. La explotación comienza identificando la vulnerabilidad **CVE-2025-49113** en Roundcube, que permite una deserialización insegura de objetos PHP. Mediante esta vulnerabilidad, se ejecuta un payload malicioso que establece una reverse shell, obteniendo acceso inicial como el usuario `www-data`. Dentro del sistema, se descubre que Roundcube almacena las credenciales IMAP de los usuarios cifradas en la base de datos MariaDB. Utilizando la clave DES encontrada en la configuración de Roundcube, se descifra la contraseña del usuario `jacob`, permitiendo el acceso SSH a la máquina. Para la escalada de privilegios, se identifica que el usuario `jacob` puede ejecutar el comando `/usr/bin/below` con privilegios de root mediante sudo, excluyendo ciertas opciones. Investigando este binario, se descubre la vulnerabilidad **CVE-2025-27591**, que implica una asignación incorrecta de permisos en el directorio `/var/log/below`, permitiendo a usuarios locales no privilegiados realizar ataques de enlace simbólico. Aprovechando esta vulnerabilidad, se manipula el archivo `/etc/passwd` mediante un enlace simbólico, creando un nuevo usuario con privilegios de root y obteniendo así acceso completo al sistema.
 
-- Tags: [#Roundcube](/tags/roundcube/) [#CVE-2025-49113](/tags/cve-2025-49113/) [#MariaDB](/tags/mariadb/) [#Roundcube-DecryptPasswordSessionVar](/tags/roundcube-decryptpasswordsessionvar/) [#InformationLeakage](/tags/informationleakage/) [#Sudoers](/tags/sudoers/) [#Below](/tags/below/) [#Symlinks](/tags/symlinks/) [#CVE-2025-27591](/tags/cve-2025-27591/)
+
 
 ----
 ## Reconnaissance
