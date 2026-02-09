@@ -94,11 +94,7 @@ Lo primero que recomiendo es preparar un buen perfil de Malleable C2. Es crucial
 
 - **Evita LSASS**: No hagas dump de LSASS ni uses Pass-the-Hash.
 
-- **Ejecución remota**: En lugar de PsExec o WmiExec, utiliza `winrs` (el cliente de WinRM), que además evade PSRemoting. Ejemplo: 
-
-```sh
-run winrs -r:ws01.lab.local "powershell -e AR3p6Y29vMTIzCg=="
-```
+- **Ejecución remota**: En lugar de PsExec o WmiExec, utiliza ScShell.
 
 - **Kerberos**: Prioriza el uso de tickets de Kerberos antes que Pass-the-Hash.
 
