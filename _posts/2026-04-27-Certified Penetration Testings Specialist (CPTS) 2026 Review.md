@@ -1,6 +1,6 @@
 ---
 title: "[EN] Certified Penetration Testing Specialist (HTB CPTS) 2026 Review"
-date: 2026-04-28 00:00:00 +0000
+date: 2026-04-27 00:00:00 +0000
 categories: [Certifications]
 tags: [CPTS, HTB-Academy, Pentesting, Active-Directory, Web, Pivoting, Reporting]
 image: /assets/img/certifications/cpts/cpts_logo.png
