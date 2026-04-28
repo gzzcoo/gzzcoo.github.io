@@ -120,7 +120,7 @@ Luego, pasé de 3 flags a 10 en apenas 4 horas. Eso incluye la famosa Flag 8, qu
 
 Saqué las últimas 4 flags a las 2 de la madrugada tras volver de trabajar.
 
-![image](/assets/img/certifications/cpts/cat.gif)
+![image](/assets/img/certifications/cpts/cpts_final.png)
 
 ### Pensamientos Finales
 Necesitas 12/14 flags + un reporte profesional. Yo conseguí 14/14. 

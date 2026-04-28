@@ -125,7 +125,7 @@ Then, I went from 3 flags to 10 in just 4 hours. That includes the famous Flag 8
 
 I finished the last 4 flags at 2 AM after coming back from work.
 
-![image](/assets/img/certifications/cpts/cat.gif)
+![image](/assets/img/certifications/cpts/cpts_final.png)
 
 ### Final Thoughts
 You need 12/14 flags + a professional commercial report. I got 14/14. 
