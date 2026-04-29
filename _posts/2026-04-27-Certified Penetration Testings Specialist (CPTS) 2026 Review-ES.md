@@ -40,7 +40,7 @@ Estos planes te dan el acceso o los "Cubos" necesarios para ir desbloqueando los
 ### Voucher del Examen
 Si ya has terminado el path y solo necesitas el intento:
 * **Voucher CPTS:** 180€
-* **Reintento de Examen:** Algo que hace que el CPTS destaque frente al OSCP y que se agradece a HTB, es que **obtienes dos intentos por voucher**. El precio indicado arriba cubre ambos, lo que significa que tienes una segunda oportunidad para aprobar sin pagar extra. Esto ayuda muchísimo a reducir la ansiedad de examenm, pero no te confíes. Además el laboratorio en el segundo intento, es el mismo.
+* **Reintento de Examen:** Algo que hace que el CPTS destaque frente al OSCP y que se agradece a HTB, es que **obtienes dos intentos por voucher**. El precio indicado arriba cubre ambos, lo que significa que tienes una segunda oportunidad para aprobar sin pagar extra. Esto ayuda muchísimo a reducir la ansiedad de examen, pero no te confíes. Además el laboratorio en el segundo intento, es el mismo.
 
 ---
 
