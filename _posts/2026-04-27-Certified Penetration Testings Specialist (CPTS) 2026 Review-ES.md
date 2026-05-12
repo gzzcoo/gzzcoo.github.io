@@ -205,9 +205,9 @@ Practica hacer el reporte durante el módulo AEN. Yo no lo hice y perdí mucho t
 
   ![image](/assets/img/certifications/cpts/sysreptor2.png)
 
-* **Personalización de NetExec:** Para que el reporte se vea más profesional, recomiendo editar el archivo `~/.nxc/nxc.conf`. Puedes cambiar el campo `pwn3d_label` (que por defecto dice "Pwn3d!") por algo más serio como "Success!" o "Authorized", ya que en una auditoría real el término "Pwn3d!" no queda muy bien. Además, puedes activar el **Audit Mode** añadiendo `<REDACTED>` en la línea `audit_mode` para que las contraseñas o hashes se oculten automáticamente en el output de consola. 
+* **Personalización de NetExec:** Para que el reporte se vea más profesional, recomiendo editar el archivo `~/.nxc/nxc.conf`. Puedes cambiar el campo `pwn3d_label` (que por defecto dice "Pwn3d!") por algo más serio como "Success!" o "Authorized", ya que en una auditoría real el término "Pwn3d!" no queda muy bien. Además, puedes activar el **Audit Mode** añadiendo `<REDACTED>` en la línea `audit_mode` para que las contraseñas o hashes se oculten automáticamente en el output.
 
-  > **Nota:** Ten mucho cuidado; el Audit Mode solo oculta el secreto en el *output* del resultado. Si has escrito la contraseña directamente en tu comando, seguirá siendo visible en la captura de pantalla y tendrás que borrarla o taparla tú mismo antes de meterla en el reporte.
+  > **Tip Pro:** Para evitar que la contraseña se vea en el comando de la consola, guárdala en un archivo `.txt` y pásala con el parámetro `-p` o `-H`. De esta forma, combinando el archivo de texto con el Audit Mode, no aparecerá ningún dato sensible ni en tu comando ni en el resultado de NetExec, dejando una captura de pantalla perfecta para el reporte.
 
   ![image](/assets/img/certifications/cpts/auditfinal.png)
 

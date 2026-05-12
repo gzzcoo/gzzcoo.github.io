@@ -212,7 +212,7 @@ Practice the report during the AEN module. I didn't, and I wasted too much time 
 
 * **NetExec Customization:** To make your report look more professional, I recommend editing the `~/.nxc/nxc.conf` file. You can change the `pwn3d_label` field (which defaults to "Pwn3d!") to something more formal like "Success!" or "Authorized," as using "Pwn3d!" in a real-world audit isn't very professional. Additionally, you can enable **Audit Mode** by adding `<REDACTED>` to the `audit_mode` line so that passwords or hashes are automatically hidden in the console output.
 
-  > **Note:** Be careful; Audit Mode only hides the secret in the result *output*. If you typed the password directly into your command, it will still be visible in the screenshot, and you'll have to manually remove or mask it before adding it to your report.
+  > **Pro Tip:** To prevent the password from showing up in your console command, save it in a `.txt` file and pass it using the `-p` or `-H` flag. This way, by combining the text file with Audit Mode, no sensitive data will appear in your command or the NetExec output, resulting in a perfect screenshot for your report.
 
 ![image](/assets/img/certifications/cpts/auditfinal.png)
 
